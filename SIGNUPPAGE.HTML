@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="../Tourism_Website_Neenu/style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
 </head>
 
 <body>
@@ -18,17 +20,16 @@
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../Tourism_Website_Neenu/img/Kerala_Tourism11.jpg" alt="Los Angeles" width="1100" height="1100">
+                    <img src="../Tourism_Website_Neenu/img/Kerala_Tourism11.jpg"alt="Los Angeles" width="1100" height="1100">
                     <div class="carousel-caption">
                         <div class="tm-row">
-
                             <section class="tm-content tm-contact">
                                 <h2 class="mb-85" style="background-color: dodgerblue;">Welcome ...!</h2>
                                 <p class="mb-85" style="box-sizing: border-box;"></p>
-                                <form id="contact-form" style="background-color:transparent;" action="districts.html"
-                                    onsubmit="return svalidate()">
+                                <form id="contact-form" style="background-color:transparent;" action="../Tourism_Website_Neenu/LOGINPAGE.HTML"
+                                    onsubmit="return svalidate ();">
                                     <div class="form-group mb-4">
-                                        <input type="text" name="name" class="form-control"
+                                        <input type="text" id="name" class="form-control"
                                             placeholder="Please enter a userame" />
                                     </div>
                                     <div class="form-group mb-4">
@@ -41,7 +42,9 @@
                                     </div>
                                     <div class="form-group mb-4">
                                         <input type="password" id="password1" class="form-control"
-                                            placeholder="Enter a password" />
+                                            placeholder="Enter a password"  onkeyup="return passwordChanged();" />
+                                            <br>
+                                            <span id="strength" style="background-color: white; border: blue;height: 10px ; width: 50px;">Type Password</span>   
                                     </div>
                                     <div class="form-group mb-4">
                                         <input type="password" id="password2" class="form-control"
@@ -54,7 +57,7 @@
                                     </div>
 
                                     <div class="text-left">
-                                        <a href="login.html" class="text-center"
+                                        <a href="../Tourism_Website_Neenu/LOGINPAGE.HTML" class="text-center"
                                             style=" color: beige; height: 20px; width:200px">I have an account..</a>
                                     </div>
                                 </form>
@@ -114,5 +117,5 @@
     </header>
 
 </body>
-
+<script src="../Tourism_Website_Neenu/signvalidation.js"> </script>
 </html>
